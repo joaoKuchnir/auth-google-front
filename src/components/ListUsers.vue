@@ -81,7 +81,7 @@
 					'bg-gray-700 text-gray-300 hover:bg-gray-600':
 						page !== pagination.currentPage,
 				}"
-				@click="fetchUsers(page)"
+				@click="fetchUsersWithPagination(page)"
 			>
 				{{ page }}
 			</span>
@@ -157,6 +157,14 @@ export default {
 			});
 		},
 
+		fetchUsersWithPagination(page) {
+            this.fetchUsers({
+				page: page,
+				name: this.filterName,
+				cpf: this.filterCpf,
+			});
+        },
+
 		formatDateToBR(dateString) {
 			if (dateString) {
 				const [year, month, day] = dateString.split('-');
@@ -181,4 +189,4 @@ export default {
 	},
 };
 </script>
-<style lang="scss" scoped></style>;
+
