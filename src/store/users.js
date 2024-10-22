@@ -21,9 +21,10 @@ const mutations = {
 }
 
 const actions = {
-    async fetchUsers({ commit }, page = 1) {
+    async fetchUsers({ commit }, payload) {
         try {
-            const { data } = await api.get(`/users?page=${page}`);
+            const { page = 1, name = '', cpf = '' } = payload;
+            const { data } = await api.get(`/users?page=${page}&name=${name}&cpf=${cpf}`);
             commit('SET_USERS', data.users.data);
             commit('SET_PAGINATION', {
                 currentPage: data.users.current_page,

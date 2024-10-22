@@ -1,6 +1,6 @@
 <template>
 	<div class="flex justify-center items-center h-screen w-full">
-		<div class="w-1/8 p-6 bg-gray-50 dark:bg-gray-700 dark:text-gray-400 rounded-lg">
+		<div class="w-96 p-6 bg-gray-50 dark:bg-gray-700 dark:text-gray-400 rounded-lg">
 			<h2 class="text-xl font-bold mb-4 text-center text-white">
 				<div class="flex-space-x-2 overflow-hidden p-4 pt-1">
 					<img
